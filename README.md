@@ -2,6 +2,14 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+## About this repository
+
+This repository has forked from [Unity-Technologies/ROS-TCP-Endpoint](https://github.com/Unity-Technologies/ROS-TCP-Endpoint)
+
+I updated to destory running nodes with ros-tcp-endpoint when changing Unity scenes.
+
+This repository is used to connect [ROS2-TMS-for-Construction](https://github.com/irvs/ros2_tms_for_construction) and Unity projects.
+
 ## Introduction
 
 [ROS](https://www.ros.org/) package used to create an endpoint to accept ROS messages sent from a Unity scene using the [ROS TCP Connector](https://github.com/Unity-Technologies/ROS-TCP-Connector) scripts.
