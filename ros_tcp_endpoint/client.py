@@ -226,3 +226,4 @@ class ClientThread(threading.Thread):
             halt_event.set()
             self.conn.close()
             self.tcp_server.loginfo("Disconnected from {}".format(self.incoming_ip))
+            self.tcp_server.destroy_nodes_except_self()

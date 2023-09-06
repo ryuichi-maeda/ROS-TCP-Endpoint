@@ -187,6 +187,24 @@ class TcpServer(Node):
 
         self.destroy_node()
 
+    def destroy_nodes_except_self(self):
+        """
+            Clean up all of the nodes
+        """
+        for ros_node in self.publishers_table.values():
+            ros_node.destroy_node()
+        for ros_node in self.subscribers_table.values():
+            ros_node.destroy_node()
+        for ros_node in self.ros_services_table.values():
+            ros_node.destroy_node()
+        for ros_node in self.unity_services_table.values():
+            ros_node.destroy_node()
+
+        self.publishers_table = {}
+        self.subscribers_table = {}
+        self.ros_services_table = {}
+        self.unity_services_table = {}
+
 
 class SysCommands:
     def __init__(self, tcp_server):
